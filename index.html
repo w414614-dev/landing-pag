@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive Access</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      color: #ccc;
+    }
+    .btn {
+      background-color: #ff0066;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+    .btn:hover {
+      background-color: #ff3385;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Unlock Exclusive Access 🔥</h1>
+  <p>Click below to continue.</p>
+  <button class="btn" onclick="goOffer()">Enter Now</button>
+
+  <script>
+    // 读取 URL 参数
+    function getParameterByName(name) {
+      const url = window.location.href;
+      const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+      const results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // 点击按钮后跳转到联盟链接
+    function goOffer() {
+      const vid = getParameterByName('vid') || 'unknown';
+      
+      // ⚠️ 替换为你自己的联盟链接
+      const offerUrl = "https://t.mbsrv2.com/391966/3785/0?bo=2753,2754,2755,2756&target=domainredirects&po=6456&aff_sub5=SF_006OG000004lmDN";
+
+      // 可选：附加追踪参数
+      const finalUrl = `${offerUrl}&vid=${vid}`;
+
+      // 5 秒后跳转
+      setTimeout(() => {
+        window.location.href = finalUrl;
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
